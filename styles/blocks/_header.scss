@@ -1,0 +1,35 @@
+@use '../helpers' as *;
+
+.header {
+    &__inner {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding-block: rem(15);
+    }
+
+    &__icon-wrapper {
+        @include flex-center;
+    }
+
+    &__list {
+        display: flex;
+        align-items: center;
+        column-gap: rem(24);
+    }
+
+    &__item {
+        display: flex;
+        height: rem(24);
+        background-color: transparent;
+    }
+
+    &__link {
+        color: var(--color-dark);
+        height: 100%;
+        &.is-active {
+            color: var(--color-lavender);
+            cursor: default;
+        }
+    }
+}

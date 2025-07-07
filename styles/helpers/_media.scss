@@ -81,3 +81,9 @@ $mobile-s: 479.98;
         }
     }
 }
+
+@mixin active {
+    &:active {
+        @content;
+    }
+}

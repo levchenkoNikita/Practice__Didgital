@@ -4,6 +4,7 @@ body {
   font-family: var(--font-family-base);
   color: var(--color-dark);
   font-weight: 400;
+  background-color: var(--color-light);
 }
 
 a,
@@ -45,12 +46,13 @@ h3, .h3 {
   --container-tablet-margin: 2.4375rem;
   --container-mobile-margin: 0.9375rem;
   --button-hover-color: #6C2BD9;
+  --button-border-radius: 3.125rem;
   --button-base-width: 11.75rem;
   --button-base-height: 3.125rem;
   --button-base-padding: 0.8125rem 1.5625rem;
-  --button-base-width: 8.6875rem;
-  --button-base-height: 2.4375rem;
-  --button-base-padding: 0.5625rem 0.8125rem;
+  --button-mobile-width: 8.6875rem;
+  --button-mobile-height: 2.4375rem;
+  --button-mobile-padding: 0.5625rem 0.8125rem;
   --input-base-width: 20.25rem;
   --input-base-height: 3.4375rem;
   --input-base-padding: 0.8125rem 1.25rem;
@@ -320,6 +322,75 @@ svg * {
     transition-duration: 0.01ms !important;
     scroll-behavior: auto !important;
   }
+}
+.button {
+  --tempValueForBorderSize: rem(3);
+  color: var(--color-light);
+  font-size: 1rem;
+  display: flex;
+  align-items: center;
+  column-gap: 0.75rem;
+  width: calc(var(--button-base-width) + var(--tempValueForBorderSize) * 2);
+  height: calc(var(--button-base-height) + var(--tempValueForBorderSize) * 2);
+  padding: var(--button-base-padding);
+  border: var(--tempValueForBorderSize) solid red;
+  border-radius: var(--button-border-radius);
+  background-color: var(--color-lavender);
+}
+@media (width <= 47.99875rem) {
+  .button {
+    width: calc(var(--button-mobile-width) + var(--tempValueForBorderSize) * 2);
+    height: calc(var(--button-mobile-height) + var(--tempValueForBorderSize) * 2);
+    padding: var(--button-mobile-padding);
+  }
+}
+@media (any-hover: hover) {
+  .button:hover {
+    background-color: var(--button-hover-color);
+  }
+}
+@media (any-hover: none) {
+  .button:active {
+    background-color: var(--button-hover-color);
+  }
+}
+.button:active {
+  border-color: #CABFFD;
+}
+.button__icon {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.header__inner {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-block: 0.9375rem;
+}
+.header__icon-wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.header__list {
+  display: flex;
+  align-items: center;
+  column-gap: 1.5rem;
+}
+.header__item {
+  display: flex;
+  height: 1.5rem;
+  background-color: transparent;
+}
+.header__link {
+  color: var(--color-dark);
+  height: 100%;
+}
+.header__link.is-active {
+  color: var(--color-lavender);
+  cursor: default;
 }
 
 /*# sourceMappingURL=main.css.map */

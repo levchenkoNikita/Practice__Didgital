@@ -1,0 +1,35 @@
+@use "../helpers" as *;
+
+.button {
+    --tempValueForBorderSize: rem(3);
+
+    color: var(--color-light);
+    font-size: rem(16);
+    display: flex;
+    align-items: center;
+    column-gap: rem(12);
+    width: calc(var(--button-base-width) + var(--tempValueForBorderSize) * 2);
+    height: calc(var(--button-base-height) + var(--tempValueForBorderSize) * 2);
+    padding: var(--button-base-padding);
+    border: var(--tempValueForBorderSize) solid red;
+    border-radius: var(--button-border-radius);
+    background-color: var(--color-lavender);
+
+    @include mobile {
+        width: calc(var(--button-mobile-width) + var(--tempValueForBorderSize) * 2);
+        height: calc(var(--button-mobile-height) + var(--tempValueForBorderSize) * 2);
+        padding: var(--button-mobile-padding);
+    }
+
+    @include hover {
+        background-color: var(--button-hover-color);
+    }
+
+    @include active {
+        border-color: #CABFFD;
+    }
+
+    &__icon {
+        @include flex-center;
+    }
+}

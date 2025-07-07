@@ -3,3 +3,8 @@
 @use "./utils";
 @use "./fonts";
 @use "./normalize";
+
+@use "./blocks/button";
+
+@use "./blocks/header";
+@use "./blocks/welcome";

@@ -19,14 +19,15 @@
 
     // BUTTONS
     --button-hover-color: #6C2BD9;
+    --button-border-radius: #{rem(50)};
 
     --button-base-width: #{rem(188)};
     --button-base-height: #{rem(50)};
     --button-base-padding: #{rem(13)} #{rem(25)};
 
-    --button-base-width: #{rem(139)};
-    --button-base-height: #{rem(39)};
-    --button-base-padding: #{rem(9)} #{rem(13)};
+    --button-mobile-width: #{rem(139)};
+    --button-mobile-height: #{rem(39)};
+    --button-mobile-padding: #{rem(9)} #{rem(13)};
 
     // INPUTS
     --input-base-width: #{rem(324)};
