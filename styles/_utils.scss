@@ -1,0 +1,32 @@
+@use 'helpers' as *;
+
+.container {
+    --tempValueForMargin: var(--container-desktop-margin);
+
+    width: calc(100% - var(--tempValueForMargin));
+    margin-inline: auto;
+
+    @include tablet {
+        --tempValueForMargin: var(--container-tablet-margin);
+    }
+
+    @include mobile {
+        --tempValueForMargin: var(--container-mobile-margin);
+    }
+}
+
+.visible-mobile {
+    @include mobile-above {
+        display: none !important;
+    }
+}
+
+.hidden-mobile {
+    @include mobile {
+        display: none !important;
+    }
+}
+
+.visually-hidden {
+    @include visually-hidden;
+}

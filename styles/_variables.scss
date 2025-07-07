@@ -1,0 +1,43 @@
+@use 'helpers' as *;
+
+:root {
+    // FONTS
+    --font-family-base: 'Montserrat', sans-serif;
+
+    // COLORS
+    --color-black: #27272A;
+    --color-grey-dark: #696969;
+    --color-grey-dark-light: #E5E7EB;
+    --color-light: #FCFBFA;
+    --color-lavender: #7E3AF2;
+    --color-lavender-red: #E02424;
+
+    // CONTAINERS
+    --container-desktop-margin: #{rem(85)};
+    --container-tablet-margin: #{rem(39)};
+    --container-mobile-margin: #{rem(15)};
+
+    // BUTTONS
+    --button-hover-color: #6C2BD9;
+
+    --button-base-width: #{rem(188)};
+    --button-base-height: #{rem(50)};
+    --button-base-padding: #{rem(13)} #{rem(25)};
+
+    --button-base-width: #{rem(139)};
+    --button-base-height: #{rem(39)};
+    --button-base-padding: #{rem(9)} #{rem(13)};
+
+    // INPUTS
+    --input-base-width: #{rem(324)};
+    --input-base-height: #{rem(55)};
+    --input-base-padding: #{rem(13)} #{rem(20)};
+
+    // TEXTAREAS
+    --textarea-base-width: #{rem(668)};
+    --textarea-base-height: #{rem(162)};
+    --textarea-base-padding: #{rem(13)} #{rem(20)};
+
+    // OTHER
+    --transition-duration: 0.2s;
+}
