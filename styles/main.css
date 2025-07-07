@@ -329,6 +329,7 @@ svg * {
   font-size: 1rem;
   display: flex;
   align-items: center;
+  align-self: start;
   column-gap: 0.75rem;
   width: calc(var(--button-base-width) + var(--tempValueForBorderSize) * 2);
   height: calc(var(--button-base-height) + var(--tempValueForBorderSize) * 2);
@@ -339,6 +340,7 @@ svg * {
 }
 @media (width <= 47.99875rem) {
   .button {
+    --tempValueForBorderSize: rem(2);
     width: calc(var(--button-mobile-width) + var(--tempValueForBorderSize) * 2);
     height: calc(var(--button-mobile-height) + var(--tempValueForBorderSize) * 2);
     padding: var(--button-mobile-padding);
@@ -363,6 +365,9 @@ svg * {
   align-items: center;
 }
 
+.header {
+  border-bottom: 0.0625rem solid var(--color-grey-dark-light);
+}
 .header__inner {
   display: flex;
   justify-content: space-between;
@@ -391,6 +396,79 @@ svg * {
 .header__link.is-active {
   color: var(--color-lavender);
   cursor: default;
+}
+@media (any-hover: hover) {
+  .header__link:hover {
+    color: var(--color-lavender);
+  }
+}
+@media (any-hover: none) {
+  .header__link:active {
+    color: var(--color-lavender);
+  }
+}
+
+.welcome {
+  position: relative;
+  z-index: 100;
+  padding-block: 10.125rem 10.375rem;
+  overflow: hidden;
+}
+.welcome__inner {
+  display: flex;
+  flex-direction: column;
+  row-gap: 3.75rem;
+}
+.welcome__title-wrapper {
+  display: flex;
+  flex-direction: column;
+  row-gap: 0.25rem;
+  margin-bottom: 2rem;
+}
+.welcome__title-name {
+  line-height: 1.5;
+  font-weight: 900;
+}
+.welcome__title-post {
+  color: var(--color-grey-dark);
+  line-height: 1.5;
+}
+.welcome__description-wrapper {
+  width: 100%;
+  max-width: 27.8125rem;
+  display: flex;
+  flex-direction: column;
+  row-gap: 1.5rem;
+}
+.welcome__description-line {
+  width: 1.5625rem;
+  height: 0.1875rem;
+  background-color: var(--color-lavender);
+}
+.welcome__description-text {
+  color: var(--color-grey-dark);
+  line-height: 1.5;
+}
+.welcome__background-image-filling {
+  position: absolute;
+  z-index: -2;
+  top: 100%;
+  left: 100%;
+  translate: -75% -68%;
+  width: 55%;
+  height: auto;
+  rotate: -45deg;
+  border-radius: 6.25rem;
+}
+.welcome__background-image-man {
+  position: absolute;
+  z-index: -1;
+  top: 100%;
+  left: 100%;
+  translate: -100% -100%;
+  width: 25%;
+  height: auto;
+  background-color: transparent;
 }
 
 /*# sourceMappingURL=main.css.map */

@@ -1,6 +1,8 @@
 @use '../helpers' as *;
 
 .header {
+    border-bottom: rem(1) solid var(--color-grey-dark-light);
+
     &__inner {
         display: flex;
         justify-content: space-between;
@@ -27,9 +29,14 @@
     &__link {
         color: var(--color-dark);
         height: 100%;
+
         &.is-active {
             color: var(--color-lavender);
             cursor: default;
+        }
+
+        @include hover {
+            color: var(--color-lavender);
         }
     }
 }
