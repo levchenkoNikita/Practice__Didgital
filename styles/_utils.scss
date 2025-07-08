@@ -3,7 +3,7 @@
 .container {
     --tempValueForMargin: var(--container-desktop-margin);
 
-    width: calc(100% - var(--tempValueForMargin));
+    width: calc(100% - var(--tempValueForMargin) * 2);
     margin-inline: auto;
 
     @include tablet {
@@ -16,13 +16,13 @@
 }
 
 .visible-mobile {
-    @include mobile-above {
+    @include mobile-s-above {
         display: none !important;
     }
 }
 
 .hidden-mobile {
-    @include mobile {
+    @include mobile-s {
         display: none !important;
     }
 }

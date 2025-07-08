@@ -39,4 +39,20 @@
             color: var(--color-lavender);
         }
     }
+
+    &__burger-button {
+        @include flex-center;
+        flex-direction: column;
+        row-gap: rem(5);
+        width: rem(32);
+        height: rem(32);
+        background-color: transparent;
+
+        & span {
+            width: rem(23);
+            height: rem(3);
+            border-radius: rem(2);
+            background-color: var(--color-black);
+        }
+    }
 }

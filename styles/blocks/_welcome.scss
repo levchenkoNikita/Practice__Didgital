@@ -3,13 +3,36 @@
 .welcome {
     position: relative;
     z-index: 100;
+    min-height: rem(768);
     padding-block: rem(162) rem(166);
     overflow: hidden;
+
+    @include laptop {
+        padding-block: rem(110) rem(105);
+        min-height: rem(568);
+    }
+
+    @include mobile {
+        padding-block: rem(44) rem(50);
+        min-height: rem(450);
+    }
+
+    @include mobile-s {
+        min-height: rem(500);
+    }
 
     &__inner {
         display: flex;
         flex-direction: column;
         row-gap: rem(60);
+
+        @include tablet {
+            row-gap: rem(36);
+        }
+
+        @include mobile-s {
+            row-gap: rem(27);
+        }
     }
 
     &__title {
@@ -18,6 +41,14 @@
             flex-direction: column;
             row-gap: rem(4);
             margin-bottom: rem(32);
+
+            @include tablet {
+                margin-bottom: 0;
+            }
+
+            @include mobile-s {
+                margin-bottom: rem(10);
+            }
         }
 
         &-name {
@@ -38,6 +69,22 @@
             display: flex;
             flex-direction: column;
             row-gap: rem(24);
+
+            @include laptop {
+                max-width: rem(400);
+            }
+
+            @include tablet {
+                margin-bottom: rem(8);
+            }
+
+            @include mobile {
+                max-width: rem(300);
+            }
+
+            @include mobile-s {
+                margin-bottom: 0;
+            }
         }
 
         &-line {
@@ -58,11 +105,32 @@
             z-index: -2;
             top: 100%;
             left: 100%;
-            translate: -75% -68%;
-            width: 55%;
+            translate: -76% -69%;
+            width: rem(1060);
             height: auto;
             rotate: -45deg;
             border-radius: rem(100);
+
+            @include laptop {
+                width: rem(800);
+                translate: -81% -70%;
+            }
+
+            @include tablet {
+                translate: -70% -70%;
+            }
+
+            @include mobile {
+                width: rem(600);
+                translate: -65% -70%;
+            }
+
+            @include mobile-s {
+                width: 110%;
+                max-width: rem(400);
+                translate: -65% -70%;
+                border-radius: rem(50);
+            }
         }
 
         &-man {
@@ -70,10 +138,30 @@
             z-index: -1;
             top: 100%;
             left: 100%;
-            translate: -100% -100%;
-            width: 25%;
+            translate: -120% -96%;
+            width: rem(500);
             height: auto;
             background-color: transparent;
+
+            @include laptop {
+                width: rem(400);
+            }
+
+            @include tablet {
+                translate: -100% -96%;
+            }
+
+            @include mobile {
+                width: 50%;
+                max-width: rem(320);
+                translate: -88% -96%;
+            }
+
+            @include mobile-s {
+                width: 55%;
+                max-width: rem(210);
+                translate: -88% -96%;
+            }
         }
     }
 }

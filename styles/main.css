@@ -64,7 +64,7 @@ h3, .h3 {
 
 .container {
   --tempValueForMargin: var(--container-desktop-margin);
-  width: calc(100% - var(--tempValueForMargin));
+  width: calc(100% - var(--tempValueForMargin) * 2);
   margin-inline: auto;
 }
 @media (width <= 63.99875rem) {
@@ -78,13 +78,13 @@ h3, .h3 {
   }
 }
 
-@media (width > 47.99875rem) {
+@media (width > 29.99875rem) {
   .visible-mobile {
     display: none !important;
   }
 }
 
-@media (width <= 47.99875rem) {
+@media (width <= 29.99875rem) {
   .hidden-mobile {
     display: none !important;
   }
@@ -341,6 +341,7 @@ svg * {
 @media (width <= 47.99875rem) {
   .button {
     --tempValueForBorderSize: rem(2);
+    font-size: 0.875rem;
     width: calc(var(--button-mobile-width) + var(--tempValueForBorderSize) * 2);
     height: calc(var(--button-mobile-height) + var(--tempValueForBorderSize) * 2);
     padding: var(--button-mobile-padding);
@@ -407,23 +408,77 @@ svg * {
     color: var(--color-lavender);
   }
 }
+.header__burger-button {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  row-gap: 0.3125rem;
+  width: 2rem;
+  height: 2rem;
+  background-color: transparent;
+}
+.header__burger-button span {
+  width: 1.4375rem;
+  height: 0.1875rem;
+  border-radius: 0.125rem;
+  background-color: var(--color-black);
+}
 
 .welcome {
   position: relative;
   z-index: 100;
+  min-height: 48rem;
   padding-block: 10.125rem 10.375rem;
   overflow: hidden;
+}
+@media (width <= 89.99875rem) {
+  .welcome {
+    padding-block: 6.875rem 6.5625rem;
+    min-height: 35.5rem;
+  }
+}
+@media (width <= 47.99875rem) {
+  .welcome {
+    padding-block: 2.75rem 3.125rem;
+    min-height: 28.125rem;
+  }
+}
+@media (width <= 29.99875rem) {
+  .welcome {
+    min-height: 31.25rem;
+  }
 }
 .welcome__inner {
   display: flex;
   flex-direction: column;
   row-gap: 3.75rem;
 }
+@media (width <= 63.99875rem) {
+  .welcome__inner {
+    row-gap: 2.25rem;
+  }
+}
+@media (width <= 29.99875rem) {
+  .welcome__inner {
+    row-gap: 1.6875rem;
+  }
+}
 .welcome__title-wrapper {
   display: flex;
   flex-direction: column;
   row-gap: 0.25rem;
   margin-bottom: 2rem;
+}
+@media (width <= 63.99875rem) {
+  .welcome__title-wrapper {
+    margin-bottom: 0;
+  }
+}
+@media (width <= 29.99875rem) {
+  .welcome__title-wrapper {
+    margin-bottom: 0.625rem;
+  }
 }
 .welcome__title-name {
   line-height: 1.5;
@@ -440,6 +495,26 @@ svg * {
   flex-direction: column;
   row-gap: 1.5rem;
 }
+@media (width <= 89.99875rem) {
+  .welcome__description-wrapper {
+    max-width: 25rem;
+  }
+}
+@media (width <= 63.99875rem) {
+  .welcome__description-wrapper {
+    margin-bottom: 0.5rem;
+  }
+}
+@media (width <= 47.99875rem) {
+  .welcome__description-wrapper {
+    max-width: 18.75rem;
+  }
+}
+@media (width <= 29.99875rem) {
+  .welcome__description-wrapper {
+    margin-bottom: 0;
+  }
+}
 .welcome__description-line {
   width: 1.5625rem;
   height: 0.1875rem;
@@ -454,21 +529,70 @@ svg * {
   z-index: -2;
   top: 100%;
   left: 100%;
-  translate: -75% -68%;
-  width: 55%;
+  translate: -76% -69%;
+  width: 66.25rem;
   height: auto;
   rotate: -45deg;
   border-radius: 6.25rem;
+}
+@media (width <= 89.99875rem) {
+  .welcome__background-image-filling {
+    width: 50rem;
+    translate: -81% -70%;
+  }
+}
+@media (width <= 63.99875rem) {
+  .welcome__background-image-filling {
+    translate: -70% -70%;
+  }
+}
+@media (width <= 47.99875rem) {
+  .welcome__background-image-filling {
+    width: 37.5rem;
+    translate: -65% -70%;
+  }
+}
+@media (width <= 29.99875rem) {
+  .welcome__background-image-filling {
+    width: 110%;
+    max-width: 25rem;
+    translate: -65% -70%;
+    border-radius: 3.125rem;
+  }
 }
 .welcome__background-image-man {
   position: absolute;
   z-index: -1;
   top: 100%;
   left: 100%;
-  translate: -100% -100%;
-  width: 25%;
+  translate: -120% -96%;
+  width: 31.25rem;
   height: auto;
   background-color: transparent;
+}
+@media (width <= 89.99875rem) {
+  .welcome__background-image-man {
+    width: 25rem;
+  }
+}
+@media (width <= 63.99875rem) {
+  .welcome__background-image-man {
+    translate: -100% -96%;
+  }
+}
+@media (width <= 47.99875rem) {
+  .welcome__background-image-man {
+    width: 50%;
+    max-width: 20rem;
+    translate: -88% -96%;
+  }
+}
+@media (width <= 29.99875rem) {
+  .welcome__background-image-man {
+    width: 55%;
+    max-width: 13.125rem;
+    translate: -88% -96%;
+  }
 }
 
 /*# sourceMappingURL=main.css.map */

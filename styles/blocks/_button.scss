@@ -19,6 +19,7 @@
     @include mobile {
         --tempValueForBorderSize: rem(2);
 
+        font-size: rem(14);
         width: calc(var(--button-mobile-width) + var(--tempValueForBorderSize) * 2);
         height: calc(var(--button-mobile-height) + var(--tempValueForBorderSize) * 2);
         padding: var(--button-mobile-padding);
