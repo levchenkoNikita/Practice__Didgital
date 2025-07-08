@@ -1,0 +1,42 @@
+@use '../helpers' as *;
+
+.interests {
+    display: flex;
+    flex-direction: column;
+    row-gap: rem(44);
+
+    &__list {
+        width: rem(353);
+        display: flex;
+        flex-direction: column;
+        align-items: start;
+        justify-content: start;
+        row-gap: rem(44);
+    }
+
+    &__card {
+        display: flex;
+        align-items: center;
+        justify-content: start;
+        column-gap: rem(16);
+
+        &-icon {
+            @include square(rem(60));
+            @include flex-center;
+            color: var(--color-lavender);
+            border: rem(2) solid var(--color-lavender);
+            border-radius: 50%;
+        }
+
+        &-info {
+            display: flex;
+            flex-direction: column;
+            align-items: start;
+            row-gap: rem(8);
+        }
+
+        &-subtitle {
+            font-weight: 600;
+        }
+    }
+}

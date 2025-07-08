@@ -1,0 +1,11 @@
+@use '../helpers' as *;
+
+.footer {
+    padding-block: rem(28);
+    display: flex;
+
+    &__text {
+        color: var(--color-grey-dark);
+        align-self: start;
+    }
+}

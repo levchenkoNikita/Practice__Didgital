@@ -1,0 +1,46 @@
+@use '../helpers' as *;
+
+.form {
+    display: flex;
+    flex-direction: column;
+    row-gap: rem(36);
+
+    &__wrapper-for-inputs {
+        display: flex;
+        row-gap: rem(24);
+        column-gap: rem(20);
+    }
+
+    &__input {
+        width: var(--input-base-width);
+        height: var(--input-base-height);
+        padding: var(--input-base-padding);
+        outline-color: var(--color-lavender);
+        border-radius: rem(16);
+        border: rem(1) solid var(--color-grey-dark-light);
+
+        &-wrapper {
+            display: flex;
+            flex-direction: column;
+            row-gap: rem(8);
+        }
+
+        &-name {}
+    }
+
+    &__wrapper-for-textarea {
+        display: flex;
+        flex-direction: column;
+        row-gap: rem(8);
+    }
+
+    &__textarea {
+        width: var(--textarea-base-width);
+        height: var(--textarea-base-height);
+        padding: var(--textarea-base-padding);
+        resize: none;
+        outline-color: var(--color-lavender);
+        border-radius: rem(16);
+        border: rem(1) solid var(--color-grey-dark-light);
+    }
+}

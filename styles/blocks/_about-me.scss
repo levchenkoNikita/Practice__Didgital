@@ -1,0 +1,88 @@
+@use '../helpers' as *;
+
+.about-me {
+    padding-block: rem(100);
+
+    &__inner {
+        display: flex;
+        flex-direction: column;
+        align-items: start;
+        row-gap: rem(80);
+    }
+
+    &__post {
+        &-wrapper {
+            width: 100%;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            flex-wrap: wrap;
+            column-gap: rem(40);
+        }
+
+        &-image {
+            position: absolute;
+            top: 0;
+            left: 50%;
+            translate: -50% 0;
+            width: 90%;
+
+            &-wrapper {
+                @include square(rem(412));
+                @include flex-center;
+                flex-shrink: 0;
+                border-radius: 50%;
+                background-image: url('../../images/background-Myimage.png');
+                background-size: cover;
+                background-position: center;
+                background-repeat: no-repeat;
+
+                &-second {
+                    @include square(rem(364));
+                    position: relative;
+                    overflow: hidden;
+                    border-radius: 50%;
+                    background-color: var(--color-grey-dark-light);
+                }
+            }
+        }
+
+        &-info {
+            color: var(--color-grey-dark);
+            display: flex;
+            flex-direction: column;
+            row-gap: rem(24);
+
+            & span {
+                width: rem(25);
+                height: rem(3);
+                background-color: var(--color-lavender);
+            }
+
+            & p {
+                max-width: rem(400);
+            }
+
+            & p strong {
+                color: var(--color-black);
+            }
+
+            &-wrapper {
+                display: flex;
+                flex-direction: column;
+                row-gap: rem(64);
+                width: rem(537);
+            }
+        }
+    }
+
+    &__experience-wrapper {
+        width: 100%;
+        display: flex;
+        justify-content: space-between;
+        align-items: start;
+        row-gap: rem(80);
+        flex-wrap: wrap;
+    }
+
+}
