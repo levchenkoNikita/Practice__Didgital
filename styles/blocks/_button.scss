@@ -35,5 +35,9 @@
 
     &__icon {
         @include flex-center;
+        
+        & svg {
+            stroke: var(--color-lavender);
+        }
     }
 }

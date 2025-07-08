@@ -365,6 +365,9 @@ svg * {
   justify-content: center;
   align-items: center;
 }
+.button__icon svg {
+  stroke: var(--color-lavender);
+}
 
 .header {
   border-bottom: 0.0625rem solid var(--color-grey-dark-light);
