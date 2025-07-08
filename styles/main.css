@@ -380,6 +380,9 @@ svg * {
   justify-content: center;
   align-items: center;
 }
+.header__icon {
+  color: var(--color-black);
+}
 .header__list {
   display: flex;
   align-items: center;
