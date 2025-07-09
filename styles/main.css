@@ -892,13 +892,19 @@ svg * {
   position: absolute;
   top: 0.9375rem;
   left: 1.25rem;
-  background: red center/cover no-repeat;
+  background: url("../../icons/profile.svg") center/cover no-repeat;
 }
-.form__input-before--name {
-  background-image: url("../../icons/profile.svg");
+.form__input-after {
+  position: relative;
 }
-.form__input-before--email {
-  background-image: url("../../icons/email.svg");
+.form__input-after::before {
+  width: 1.5rem;
+  height: 1.5rem;
+  content: "";
+  position: absolute;
+  top: 0.9375rem;
+  left: 1.25rem;
+  background: url("../../icons/email.svg") center/cover no-repeat;
 }
 @media (width <= 47.99875rem) {
   .form__input::placeholder {

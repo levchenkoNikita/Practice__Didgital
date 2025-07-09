@@ -37,15 +37,19 @@
                 position: absolute;
                 top: rem(15);
                 left: rem(20);
-                background: red center/cover no-repeat;
+                background: url('../../icons/profile.svg') center/cover no-repeat;
             }
+        }
 
-            &--name {
-                background-image: url('../../icons/profile.svg');
-            }
-
-            &--email {
-                background-image: url('../../icons/email.svg');
+        &-after {
+            position: relative;
+            &::before {
+                @include square(rem(24));
+                content: '';
+                position: absolute;
+                top: rem(15);
+                left: rem(20);
+                background: url('../../icons/email.svg') center/cover no-repeat;
             }
         }
 
