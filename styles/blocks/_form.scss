@@ -1,25 +1,62 @@
 @use '../helpers' as *;
 
 .form {
+    width: 100%;
     display: flex;
     flex-direction: column;
     row-gap: rem(36);
 
+    @include mobile-s {
+        padding-inline: rem(16);
+    }
+
     &__wrapper-for-inputs {
+        width: 100%;
         display: flex;
         row-gap: rem(24);
         column-gap: rem(20);
+
+        @include tablet {
+            flex-direction: column;
+        }
     }
 
     &__input {
-        width: var(--input-base-width);
+        width: 100%;
         height: var(--input-base-height);
         padding: var(--input-base-padding);
         outline-color: var(--color-lavender);
         border-radius: rem(16);
         border: rem(1) solid var(--color-grey-dark-light);
 
+        &-before {
+            position: relative;
+            &::before {
+                @include square(rem(24));
+                content: '';
+                position: absolute;
+                top: rem(15);
+                left: rem(20);
+                background: red center/cover no-repeat;
+            }
+
+            &--name {
+                background-image: url('../../icons/profile.svg');
+            }
+
+            &--email {
+                background-image: url('../../icons/email.svg');
+            }
+        }
+
+        @include mobile {
+            &::placeholder {
+                font-size: rem(14);
+            }
+        }
+
         &-wrapper {
+            width: 100%;
             display: flex;
             flex-direction: column;
             row-gap: rem(8);
@@ -34,12 +71,18 @@
     }
 
     &__textarea {
-        width: var(--textarea-base-width);
+        width: 100%;
         height: var(--textarea-base-height);
         padding: var(--textarea-base-padding);
         resize: none;
         outline-color: var(--color-lavender);
         border-radius: rem(16);
         border: rem(1) solid var(--color-grey-dark-light);
+
+        @include mobile {
+            &::placeholder {
+                font-size: rem(14);
+            }
+        }
     }
 }

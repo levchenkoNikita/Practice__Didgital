@@ -6,12 +6,17 @@
     row-gap: rem(44);
 
     &__list {
-        width: rem(353);
+        width: rem(364);
         display: flex;
         flex-direction: column;
         align-items: start;
         justify-content: start;
         row-gap: rem(44);
+
+        @include mobile {
+            width: 100%;
+            min-width: rem(246);
+        }
     }
 
     &__card {

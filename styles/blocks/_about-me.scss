@@ -18,6 +18,7 @@
             justify-content: space-between;
             flex-wrap: wrap;
             column-gap: rem(40);
+            row-gap: rem(40);
         }
 
         &-image {
@@ -32,6 +33,7 @@
                 @include flex-center;
                 flex-shrink: 0;
                 border-radius: 50%;
+                background-color: red;
                 background-image: url('../../images/background-Myimage.png');
                 background-size: cover;
                 background-position: center;
@@ -43,6 +45,14 @@
                     overflow: hidden;
                     border-radius: 50%;
                     background-color: var(--color-grey-dark-light);
+
+                    @include laptop {
+                        @include square(rem(255));
+                    }
+                }
+
+                @include laptop {
+                    @include square(rem(290));
                 }
             }
         }
@@ -72,6 +82,11 @@
                 flex-direction: column;
                 row-gap: rem(64);
                 width: rem(537);
+
+                @include laptop {
+                    width: rem(450);
+                    row-gap: rem(40);
+                }
             }
         }
     }
@@ -81,8 +96,12 @@
         display: flex;
         justify-content: space-between;
         align-items: start;
+        column-gap: rem(40);
         row-gap: rem(80);
-        flex-wrap: wrap;
+
+        @include laptop {
+            flex-direction: column;
+        }
     }
 
 }
