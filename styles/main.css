@@ -892,7 +892,7 @@ svg * {
   position: absolute;
   top: 0.9375rem;
   left: 1.25rem;
-  background: url("/icons/profile.svg") center/cover no-repeat; /**/
+  background: url("../icons/profile.svg") center/cover no-repeat; /**/
 }
 .form__input-after {
   position: relative;
@@ -904,7 +904,7 @@ svg * {
   position: absolute;
   top: 0.9375rem;
   left: 1.25rem;
-  background: url("/icons/email.svg") center/cover no-repeat; /**/
+  background: url("/icons/email.svg") no-repeat; /**/
 }
 @media (width <= 47.99875rem) {
   .form__input::placeholder {
