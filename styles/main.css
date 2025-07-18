@@ -635,7 +635,7 @@ svg * {
   flex-shrink: 0;
   border-radius: 50%;
   background-color: red;
-  background-image: url("../../images/background-Myimage.png");
+  background-image: url("../images/background-Myimage.png"); /**/
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
@@ -815,7 +815,7 @@ svg * {
 
 .email {
   padding-block: 4.375rem;
-  background: red url("../../images/background-Myimage.png") center/cover no-repeat;
+  background: red url("../images/background-Myimage.png") center/cover no-repeat; /**/
 }
 .email__inner {
   display: flex;
@@ -892,7 +892,7 @@ svg * {
   position: absolute;
   top: 0.9375rem;
   left: 1.25rem;
-  background: url("../../icons/profile.svg") center/cover no-repeat;
+  background: url("../icons/profile.svg") center/cover no-repeat; /**/
 }
 .form__input-after {
   position: relative;
@@ -904,7 +904,7 @@ svg * {
   position: absolute;
   top: 0.9375rem;
   left: 1.25rem;
-  background: url("../../icons/email.svg") center/cover no-repeat;
+  background: url("../icons/email.svg") center/cover no-repeat; /**/
 }
 @media (width <= 47.99875rem) {
   .form__input::placeholder {
